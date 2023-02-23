@@ -46,10 +46,6 @@
 			<value>true</value>
 		</right>
 		<right>
-			<name>AnalyticsSystemClient</name>
-			<value>false</value>
-		</right>
-		<right>
 			<name>InteractiveOpenExtDataProcessors</name>
 			<value>true</value>
 		</right>
