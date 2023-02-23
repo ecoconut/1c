@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="ГруппаСостав" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа состав</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа состав</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСоставРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСписание" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Списание</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа списание</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСписаниеРасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<Table name="СоставСписание" id="9">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.СоставСписание</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СоставСписаниеКонтекстноеМеню" id="10"/>
+							<AutoCommandBar name="СоставСписаниеКоманднаяПанель" id="11"/>
+							<ExtendedTooltip name="СоставСписаниеРасширеннаяПодсказка" id="12"/>
+							<SearchStringAddition name="СоставСписаниеСтрокаПоиска" id="13">
+								<AdditionSource>
+									<Item>СоставСписание</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставСписаниеСтрокаПоискаКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="СоставСписаниеСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СоставСписаниеСостояниеПросмотра" id="16">
+								<AdditionSource>
+									<Item>СоставСписание</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставСписаниеСостояниеПросмотраКонтекстноеМеню" id="17"/>
+								<ExtendedTooltip name="СоставСписаниеСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СоставСписаниеУправлениеПоиском" id="19">
+								<AdditionSource>
+									<Item>СоставСписание</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставСписаниеУправлениеПоискомКонтекстноеМеню" id="20"/>
+								<ExtendedTooltip name="СоставСписаниеУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СоставСписаниеНомерСтроки" id="22">
+									<DataPath>Объект.СоставСписание.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоставСписаниеНомерСтрокиКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="СоставСписаниеНомерСтрокиРасширеннаяПодсказка" id="24"/>
+								</LabelField>
+								<InputField name="СоставСписаниеМестоХранения" id="25">
+									<DataPath>Объект.СоставСписание.МестоХранения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоставСписаниеМестоХраненияКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="СоставСписаниеМестоХраненияРасширеннаяПодсказка" id="27"/>
+								</InputField>
+								<InputField name="СоставСписаниеКоличество" id="28">
+									<DataPath>Объект.СоставСписание.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоставСписаниеКоличествоКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="СоставСписаниеКоличествоРасширеннаяПодсказка" id="30"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЗачисление" id="55">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зачисление</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа зачисление</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЗачислениеРасширеннаяПодсказка" id="56"/>
+					<ChildItems>
+						<Table name="СоставЗачисление" id="31">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.СоставЗачисление</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СоставЗачислениеКонтекстноеМеню" id="32"/>
+							<AutoCommandBar name="СоставЗачислениеКоманднаяПанель" id="33"/>
+							<ExtendedTooltip name="СоставЗачислениеРасширеннаяПодсказка" id="34"/>
+							<SearchStringAddition name="СоставЗачислениеСтрокаПоиска" id="35">
+								<AdditionSource>
+									<Item>СоставЗачисление</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставЗачислениеСтрокаПоискаКонтекстноеМеню" id="36"/>
+								<ExtendedTooltip name="СоставЗачислениеСтрокаПоискаРасширеннаяПодсказка" id="37"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СоставЗачислениеСостояниеПросмотра" id="38">
+								<AdditionSource>
+									<Item>СоставЗачисление</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставЗачислениеСостояниеПросмотраКонтекстноеМеню" id="39"/>
+								<ExtendedTooltip name="СоставЗачислениеСостояниеПросмотраРасширеннаяПодсказка" id="40"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СоставЗачислениеУправлениеПоиском" id="41">
+								<AdditionSource>
+									<Item>СоставЗачисление</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставЗачислениеУправлениеПоискомКонтекстноеМеню" id="42"/>
+								<ExtendedTooltip name="СоставЗачислениеУправлениеПоискомРасширеннаяПодсказка" id="43"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СоставЗачислениеНомерСтроки" id="44">
+									<DataPath>Объект.СоставЗачисление.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоставЗачислениеНомерСтрокиКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="СоставЗачислениеНомерСтрокиРасширеннаяПодсказка" id="46"/>
+								</LabelField>
+								<InputField name="СоставЗачислениеМестоХранения" id="47">
+									<DataPath>Объект.СоставЗачисление.МестоХранения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоставЗачислениеМестоХраненияКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="СоставЗачислениеМестоХраненияРасширеннаяПодсказка" id="49"/>
+								</InputField>
+								<InputField name="СоставЗачислениеКоличество" id="50">
+									<DataPath>Объект.СоставЗачисление.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоставЗачислениеКоличествоКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="СоставЗачислениеКоличествоРасширеннаяПодсказка" id="52"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ДвижениеСредств</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>
